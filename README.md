@@ -17,3 +17,10 @@ sudo curl -sL https://raw.githubusercontent.com/fsc-demo-wim/netlinkd/master/get
 sudo curl -sL https://raw.githubusercontent.com/fsc-demo-wim/netlinkd/master/get.sh | sudo bash -s -- -v 0.1.0
 ``` 
 
+netlinkd is a system daemon that should be started and enabled through systemd
+
+```
+sudo systemctl start netlinkd
+sudo systemctl enable netlinkd
+```
+

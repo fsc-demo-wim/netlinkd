@@ -23,7 +23,7 @@ nfpms:
     file_name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
     package_name: netlinkd
     maintainer: Wim Henderickx <wim.henderickx@nokia.com>
-    homepage: https://github.com/fsc-demo/wim/netlinkd
+    homepage: https://github.com/fsc-demo-wim/netlinkd
     description: |
       netlinkd written in go
     vendor: Nokia
