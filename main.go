@@ -8,7 +8,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.wim/fsc-demo-wim/netlinkd/netlinktypes"
+	"github.com/fsc-demo-wim/netlinkd/netlinktypes"
 
 	log "github.com/sirupsen/logrus"
 	"github.com/vishvananda/netlink"
