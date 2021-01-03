@@ -1,0 +1,13 @@
+[Unit]
+Description=Netlink demo daemon service
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=nokia
+ExecStart=/usr/bin/env netlinkd
+
+[Install]
+WantedBy=multi-user.target

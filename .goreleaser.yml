@@ -1,0 +1,36 @@
+project_name: netlinkd
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+archives:
+  - replacements:
+      linux: Linux
+checksum:
+  name_template: checksums.txt
+snapshot:
+  name_template: "{{ .Tag }}-next"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+
+nfpms:
+  - id: netlinkd
+    file_name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    package_name: netlinkd
+    maintainer: Wim Henderickx <wim.henderickx@nokia.com>
+    homepage: https://github.com/fsc-demo/wim/netlinkd
+    description: |
+      netlinkd written in go
+    vendor: Nokia
+    license: GNU GPLv3
+    formats:
+      - rpm
+      - deb
+    bindir: /usr/bin
+    files:
+      ./netlinkd.service: /etc/systemd/system/netlinkd.service
