@@ -1,4 +1,4 @@
-module github.wim/fsc-demo-wim/netlinkd
+module github.com/fsc-demo-wim/netlinkd
 
 go 1.15
 
